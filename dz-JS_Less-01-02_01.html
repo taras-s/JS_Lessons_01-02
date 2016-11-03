@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Урок 1-2. Задание-1</title>
+</head>
+
+<body>
+<h3>Урок 1-2. Задание-1<br>Возведение числа в степень</h3>
+<p>by Taras Semeniuk</p>
+<script>
+	
+
+
+
+var a = prompt("Введите число: ",'');
+console.log("a=", a);
+if ( (a != null) & (a !="") ) {
+	var b = prompt("Введите степень: ",'');
+	if ( (b != null) & (b !="") ) {
+		console.log("==========\nresult=",pow(a,b));
+	}
+}
+
+
+
+
+function pow(a,b){
+var res=1;
+
+while (b < 0){ 
+	// console.log("b=", b, "res=", res);
+	res=res/a;
+	b++;
+	}
+
+while (b > 0){ 
+	// console.log("b=", b, "res=", res);
+	res=res*a;
+	b--;
+	}
+
+return res;
+}
+
+
+
+</script>
+</body>
+</html>
+
+

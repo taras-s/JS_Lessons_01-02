@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Урок 1-2. Задание-1</title>
+</head>
+
+<body>
+<h3>Урок 1-2. Задание-2<br>Авторизация</h3>
+<p>by Taras Semeniuk</p>
+<script>
+	
+
+var name;
+var nameColl = [];
+var namesTotally = 5;
+
+do { 
+	name = prompt("Добавьте " + (namesTotally - nameColl.length) + " имен",'');
+	nameColl[nameColl.length] = name.toLowerCase();
+	console.log( "Collection: " + nameColl );
+}
+while ( (name != "null") & (name !="") & (nameColl.length < namesTotally) );
+
+
+if ((name != "null") & (name !="")){
+	var userName = prompt("Имя пользователя: ",'');
+		if ( (userName != "null") & (userName !="") ) {					//cancel?
+			var a = nameColl.indexOf(userName.toLowerCase());				//
+			if (a != -1) { alert(userName+", вы успешно вошли"); }
+			else { alert("Нет такого пользователя"); }
+		}
+}
+else{alert("Good luck!");}
+
+
+</script>
+</body>
+</html>
+
+
